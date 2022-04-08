@@ -1,0 +1,10 @@
+# given string as input, output how many times each letter appears in the string.
+# Data is stored in dictionary, with the letters as the keys, and the corresponding counts as the values 
+#create program to take a string as input and output a dictionary which represent the letter count. 
+
+string = raw_input("What is your input?")
+letter = list(string)
+for i in letter:
+    count = letter.count(i)
+    relate = dict(i, count)
+print(relate)

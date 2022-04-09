@@ -1,6 +1,6 @@
 # **Python basic learning in sololearn**
 - [**Python basic learning in sololearn**](#python-basic-learning-in-sololearn)
-  - [1.  Sololearn intermediate - collection type](#1--sololearn-intermediate---collection-type)
+  - [1. Sololearn intermediate - collection type](#1-sololearn-intermediate---collection-type)
     - [1.1 Python detect empty input (ticket)](#11-python-detect-empty-input-ticket)
     - [1.2 Tuple unpack (Square up)](#12-tuple-unpack-square-up)
     - [1.3 Tuples (contact search)](#13-tuples-contact-search)
@@ -12,7 +12,7 @@
     - [2.2 map and filter (get a raise/animal lifetime)](#22-map-and-filter-get-a-raiseanimal-lifetime)
     - [2.3 Generators (Generator)](#23-generators-generator)
 
-## 1.  Sololearn intermediate - collection type 
+## 1. Sololearn intermediate - collection type 
 
 ### 1.1 Python detect empty input (ticket)
 - notes in python for beginner
@@ -49,6 +49,7 @@ reassign 1 to a, 2 to b and 3 to c
 - tuple: collection which is order and unchangable, allow duplicate members;
 - set: collection which is unordered and unindexed, do not allow duplicate members;
 - dictionary: collection which is ordered and changeable, no duplicate members. 
+- [Final project - letter counter](Practice/Letter%20counter.py)
 
 ## 2. Sololearn intermediate - Functional programming
 
@@ -150,4 +151,5 @@ reassign 1 to a, 2 to b and 3 to c
   (4,5,6)
   ```
 - Kwargs recognize the a=7 and b=8 and convert them into dictionaries. Args recognize the unsure 4,5,6 and convert it into tuples
+- [Final project - spelling backward](Practice/Spelling%20backward.py)
   

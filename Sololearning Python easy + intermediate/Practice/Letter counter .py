@@ -4,7 +4,15 @@
 
 string = raw_input("What is your input?")
 letter = list(string)
+count = []
 for i in letter:
-    count = letter.count(i)
-    relate = dict(i, count)
-print(relate)
+    count_number = letter.count(i)
+    count.append(count_number)
+count_dic = {}
+for key in letter:
+    for value in count:
+        count_dic[key] = value
+        count.remove(value)
+        break
+print(count_dic)
+print(count)

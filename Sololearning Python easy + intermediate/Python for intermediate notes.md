@@ -125,7 +125,7 @@ reassign 1 to a, 2 to b and 3 to c
   ```
 - Base case of recursive function is 1
 
- ### 2.6 *args and **kwargs (Making it work)
+### 2.6 *args and **kwargs (Making it work)
  - "* args" as function parameter enables you to pass an arbitrary number of arguments to that function. The arguments are then accessible as the tuple args in the body of the function
    ```
     def function(named_arg, *args)
@@ -153,3 +153,72 @@ reassign 1 to a, 2 to b and 3 to c
 - Kwargs recognize the a=7 and b=8 and convert them into dictionaries. Args recognize the unsure 4,5,6 and convert it into tuples
 - [Final project - spelling backward](Practice/Spelling%20backward.py)
   
+
+## 3. OOP (Object oriented programming)
+### 3.1 Classes (Game over)
+- OOPs are created using classes. The classes describes what the object will be. Classes are created using keyword Class and an idented block, which contains class method (usually function).
+- `_init_` method: when an instance of class is created, using the class name as function
+- All methods must have slef as the first parameter, it would also have attributes (accessed by putting a dot, and the attribute name after an instance). 
+  ```
+  class Cat:
+      def __init__(self, color, legs):
+        self.color = color
+        self.legs = legs
+      def bark(self):
+        print("Woof!")
+        ##new method is add, still need self as first parameter
+  felix = Cat ("ginger", 4)
+  felix.bark()
+  ```
+
+### 3.2 Inheritance (Fine art)
+- Inheritance provides a way to share functionality between classes. Express similarity by making them all inherit from a superclass (shared functionality). 
+  ```
+  class Animal:
+      def __init__(self, color, legs):
+        self.color = color
+        self.legs = legs
+  Class Dog(Animal):
+      def bark(self):
+        print("Woof!")
+  Class cat(Animal):
+      def purr(self):
+        print("Purr!")
+  felix = Cat ("ginger", 4)
+  felix.purr()
+  ```
+- The class that inherits from another class is called a subclass (eg. Cat). A class that is inherited from is called a superclass (eg. Animal). Inherited attributes can be override by other methods 
+- Super function is a useful inheritance-related function that refers to the parent class. It can be used to find the method with a certain name in an object's superclass. 
+  ```
+  Class A:
+    def spam(self)L]:
+      print(1)
+  Class B:
+    def spam(self):
+      print(2)
+      super().spam()
+  B().spam()
+  ```
+- It will return to output 2 and then 1. 
+
+### 3.3 Magic methods and operator overload (Shape factory)
+- Magic methods are special methods which have double underscores at the beginning and end of their names (Dunders), for example `__init__`. 
+- One common use of them is operator overloading. It means defining operators for custom classes that allow operators such as + and * to be used on them (For example `__add__` for +). 
+   ```
+   class Vector2D:
+      def __init__(self,x,y):
+        self.x = x
+        self.y = y
+      def __add__ (self, other):
+        return Vector2D(self.x+other.x, self.y+other.y)
+  first = Vector2D(5,7)
+  second = Vector2D(3,9)
+  result = first + second
+  print(result.x)
+  print(result.y)
+  ```
+- It will return 8 and 16. 
+- Other common operator: `__sub__` for -; `__mul__` for *; `__truediv__` for /; `__floordiv__` for //; `__mod__` for %; `__pow__` for **; `__and__` for &; `__xor__` for ^; `__or__`for|
+- x+y is translated into `x._add_(y)`. If x has not implemented `__add__`, and x and y are of different types, then `y._radd_(x)` is called. 
+- Magic methods for comparison: `__It__` for <; `__le__` for <=; `__eq__` for ==; `__ne__` for !=; `__gt__` for >; `__ge__` for >=. If `__ne__` is not implemented, it returns the opposite of `__eq__`. 
+- Magic methods for making classes act like containers: `__len__` for len(); `__getitem__` for indexing; `__setitem__` for assigning to indexed values; `__delitem__` for deleting indexed values; `__iter__` for iteration over objects (eg. in for loops); `__contains__` for in; `__call__` for calling objects as functions; `__int__`, `__str__` for converting objects to built-in types. 

@@ -15,10 +15,10 @@ class Shape:
         else:
             return False
 
-w1 = int(input("W1"))
-h1 = int(input("H1"))
-w2 = int(input("W2"))
-h2 = int(input("H2"))
+w1 = int(input("W1?"))
+h1 = int(input("H1?"))
+w2 = int(input("W2?"))
+h2 = int(input("H2?"))
 
 s1= Shape(w1, h1)
 s2= Shape(w2, h2)

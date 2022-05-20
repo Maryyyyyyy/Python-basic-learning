@@ -222,3 +222,8 @@ reassign 1 to a, 2 to b and 3 to c
 - x+y is translated into `x._add_(y)`. If x has not implemented `__add__`, and x and y are of different types, then `y._radd_(x)` is called. 
 - Magic methods for comparison: `__It__` for <; `__le__` for <=; `__eq__` for ==; `__ne__` for !=; `__gt__` for >; `__ge__` for >=. If `__ne__` is not implemented, it returns the opposite of `__eq__`. 
 - Magic methods for making classes act like containers: `__len__` for len(); `__getitem__` for indexing; `__setitem__` for assigning to indexed values; `__delitem__` for deleting indexed values; `__iter__` for iteration over objects (eg. in for loops); `__contains__` for in; `__call__` for calling objects as functions; `__int__`, `__str__` for converting objects to built-in types. 
+### 3.4. Data hiding
+- Encapsulation involves the package of related variables and functions into a single easy-to-use object (instance of a class)
+### 3.5. Class method
+- Methods of objects are classed by an instance of a class, which is then passed to the self parameter of the method
+- Class methods are different, they are called by a class, which is then passed to the cls parameter of method. 
